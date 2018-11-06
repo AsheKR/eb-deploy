@@ -2,6 +2,7 @@ FROM                        python:3.6.7-slim
 MAINTAINER                  ex@ex.com
 
 # 배포환경, 개발환경 환경설정
+ENV                         DJANGO_SETTINGS_MODULE  config.settings.production
 ENV                         LAGN                    c.UTF-8
 
 # 기본 패키지 설치 및 업데이트
@@ -28,6 +29,9 @@ RUN                         rm -rf /etc/nginx/sites-available/*
 RUN                         rm -rf /etc/nginx/sites-enabled/*
 RUN                         cp -f /srv/projects/.config/app.nginx /etc/nginx/sites-available/
 RUN                         ln -sf /etc/nginx/sites-available/app.nginx /etc/nginx/sites-enabled/app.nginx
+
+# 80번 포트 열기
+EXPOSE                      80
 
 # supervisord 설정
 RUN                         cp -f /srv/projects/.config/supervisord.conf /etc/supervisor/conf.d/
