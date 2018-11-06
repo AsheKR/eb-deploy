@@ -48,3 +48,5 @@ LOGGING = {
         }
     }
 }
+
+ALLOWED_HOSTS = PRODUCTION_JSON['ALLOWED_HOST']

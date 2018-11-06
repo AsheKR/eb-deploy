@@ -36,12 +36,6 @@ AWS_SECRET_ACCESS_KEY = SECRET_JSON['AWS_S3_SECRET_KEY']
 
 AUTH_USER_MODEL = 'members.User'
 
-ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'localhost',
-    '.amazonaws.com',
-]
-
 # Application definition
 
 INSTALLED_APPS = [

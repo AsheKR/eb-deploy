@@ -48,3 +48,5 @@ LOGGING = {
         }
     }
 }
+
+ALLOWED_HOSTS = DEV_JSON['ALLOWED_HOST']
