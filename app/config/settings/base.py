@@ -19,7 +19,7 @@ SECRET_DIR = os.path.join(ROOT_DIR, '.secrets')
 
 # Media, Static
 STATIC_URL = '/static/'
-STATIC_ROOT = '.static/'
+STATIC_ROOT = os.path.join(ROOT_DIR, '.static/')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = '.media/'
