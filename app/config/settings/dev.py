@@ -3,7 +3,7 @@ from .base import *
 DEBUG = True
 
 
-WSGI_APPLICATION = 'config.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.dev.application'
 
 DEV_JSON = json.load(open(os.path.join(SECRET_DIR, 'dev.json')))
 
