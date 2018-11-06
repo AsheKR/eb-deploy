@@ -1,4 +1,4 @@
-FROM                        eb-docker:base
+FROM                        m41d/eb-docker:base
 
 # /srv/projects 폴더 내부에 복사
 COPY                        ./ /srv/projects

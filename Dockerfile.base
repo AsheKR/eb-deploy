@@ -8,10 +8,11 @@ ENV                         LAGN                    c.UTF-8
 # 기본 패키지 설치 및 업데이트
 RUN                         apt -y update
 RUN                         apt -y dist-upgrade
-RUN                         apt -y install gcc nginx supervisor
-
-# uWSGI
-RUN                         pip3 install uwsgi
+RUN                         apt -y install nginx supervisor && \
+                            apt -y install gcc && \
+                            pip3 install uwsgi && \
+                            apt -y remove gcc && \
+                            apt -y autoremove
 
 # requirements 설치
 COPY                        requirements_production.txt /tmp/requirements.txt
