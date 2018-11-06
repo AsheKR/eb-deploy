@@ -13,7 +13,7 @@ RUN                         apt -y install gcc nginx supervisor
 RUN                         pip3 install uwsgi
 
 # requirements 설치
-COPY                        requirements.txt /tmp/
+COPY                        requirements_production.txt /tmp/requirements.txt
 RUN                         pip3 install -r /tmp/requirements.txt
 
 # /srv/projects 폴더 내부에 복사
